@@ -4,10 +4,10 @@
 \alias{calc_index}
 \title{Calculate the index based on the susceptible vector}
 \usage{
-calc_index(sample_vector, suscept_vector)
+calc_index(abundance_matrix, suscept_vector)
 }
 \arguments{
-\item{sample_vector}{The vector of taxonomic abundances for a sample}
+\item{abundance_matrix}{The vector of taxonomic abundances for a sample}
 
 \item{suscept_vector}{The vector of how susceptible a species is to the specified antibiotics}
 }

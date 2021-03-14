@@ -2,22 +2,22 @@
 % Please edit documentation in R/abx_index.R
 \name{gram_neg_list}
 \alias{gram_neg_list}
-\title{Function to return susceptibility or resistance to antibiotics targeting gram negative bacteria}
+\title{Returns taxons that are susceltible or resistant to antibiotics targeting gram negative bacteria}
 \usage{
-gram_neg_list(abundance, lineage)
+gram_neg_list(abundance, delim = "; ")
 }
 \arguments{
-\item{abundance}{A list of relative abundances of bacterial taxons for a single sample}
+\item{abundance}{A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by \code{delim}}
 
-\item{lineage}{Name of taxonomy lineage for each relative abundance in a sample (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia etc.)}
+\item{delim}{Delimiter for the taxonomy lineage rownames. Rownames MUST contain \code{Kingdom} down to \code{Species} level separation by the \code{delim} even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )}
 }
 \value{
 A dataframe of taxa abundances and whether they are susceptible or resistant to anti-gram negative antibiotics
 }
 \description{
-Function to return susceptibility or resistance to antibiotics targeting gram negative bacteria
+Returns taxons that are susceltible or resistant to antibiotics targeting gram negative bacteria
 }
 \examples{
-do.call(rbind, apply(abx_test_df, 2, gram_neg_list, row.names(abx_test_df)))
+gram_neg_list(abx_test_df)
 
 }

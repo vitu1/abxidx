@@ -4,15 +4,17 @@
 \alias{is_susceptible}
 \title{Calculate the susceptiblity vector from taxonomic lineage based on the given bacterial phenotype}
 \usage{
-is_susceptible(taxa, idx)
+is_susceptible(taxa, idx, delim)
 }
 \arguments{
 \item{taxa}{The lineage name of taxonomic ranks}
 
 \item{idx}{The bacterial phenotype to calculate the susceptibility}
+
+\item{delim}{The delimiter separating each taxonomic rank}
 }
 \value{
-A vector of 0 and 1, where 0 is resistant and 1 is susceptible
+A vector of 0 and 1, where 0 signifies a resistant taxon or lack of information and 1 signifies a susceptible taxon
 }
 \description{
 Calculate the susceptiblity vector from taxonomic lineage based on the given bacterial phenotype

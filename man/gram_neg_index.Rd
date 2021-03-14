@@ -2,22 +2,22 @@
 % Please edit documentation in R/abx_index.R
 \name{gram_neg_index}
 \alias{gram_neg_index}
-\title{Function to calculate antibiotics index targeting gram negatives such as Polymyxin and Aztreonam}
+\title{Calculate antibiotics index targeting gram negatives such as Polymyxin and Aztreonam}
 \usage{
-gram_neg_index(abundance, lineage)
+gram_neg_index(abundance, delim = "; ")
 }
 \arguments{
-\item{abundance}{A list of relative abundances of bacterial taxons for a single sample}
+\item{abundance}{A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by \code{delim}}
 
-\item{lineage}{Name of taxonomy lineage for each relative abundance in a sample (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia etc.)}
+\item{delim}{Delimiter for the taxonomy lineage rownames. Rownames MUST contain \code{Kingdom} down to \code{Species} level separation by the \code{delim} even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )}
 }
 \value{
-The calculated antibiotics index for the sample
+The calculated antibiotics index each sample in the dataframe
 }
 \description{
-Function to calculate antibiotics index targeting gram negatives such as Polymyxin and Aztreonam
+Calculate antibiotics index targeting gram negatives such as Polymyxin and Aztreonam
 }
 \examples{
-apply(abx_test_df, 2, gram_neg_index, row.names(abx_test_df))
+gram_neg_index(abx_test_df)
 
 }

@@ -2,22 +2,22 @@
 % Please edit documentation in R/abx_index.R
 \name{anaerobe_list}
 \alias{anaerobe_list}
-\title{Function to return susceptibility or resistance to antibiotics targeting anaerobes}
+\title{Return taxons that are susceptible or resistant to antibiotics targeting anaerobes}
 \usage{
-anaerobe_list(abundance, lineage)
+anaerobe_list(abundance, delim = "; ")
 }
 \arguments{
-\item{abundance}{A list of relative abundances of bacterial taxons for a single sample}
+\item{abundance}{A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by \code{delim}}
 
-\item{lineage}{Name of taxonomy lineage for each relative abundance in a sample (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia etc.)}
+\item{delim}{Delimiter for the taxonomy lineage rownames. Rownames MUST contain \code{Kingdom} down to \code{Species} level separation by the \code{delim} even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )}
 }
 \value{
 A dataframe of taxa abundances and whether they are susceptible or resistant to anti-anaerobic antibiotics
 }
 \description{
-Function to return susceptibility or resistance to antibiotics targeting anaerobes
+Return taxons that are susceptible or resistant to antibiotics targeting anaerobes
 }
 \examples{
-do.call(rbind, apply(abx_test_df, 2, anaerobe_list, row.names(abx_test_df)))
+anaerobe_list(abx_test_df)
 
 }

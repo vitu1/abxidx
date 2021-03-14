@@ -2,22 +2,22 @@
 % Please edit documentation in R/abx_index.R
 \name{vancomycin_list}
 \alias{vancomycin_list}
-\title{Function to return taxon susceptible or resistant to Vancomycin}
+\title{Return taxons that are susceptible or resistant to Vancomycin}
 \usage{
-vancomycin_list(abundance, lineage)
+vancomycin_list(abundance, delim = "; ")
 }
 \arguments{
-\item{abundance}{A list of relative abundances of bacterial taxons for a single sample}
+\item{abundance}{A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by \code{delim}}
 
-\item{lineage}{Name of taxonomy lineage for each relative abundance in a sample (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia etc.)}
+\item{delim}{Delimiter for the taxonomy lineage rownames. Rownames MUST contain \code{Kingdom} down to \code{Species} level separation by the \code{delim} even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )}
 }
 \value{
 A dataframe of taxa abundances and whether they are susceptible or resistant to vancomycin
 }
 \description{
-Function to return taxon susceptible or resistant to Vancomycin
+Return taxons that are susceptible or resistant to Vancomycin
 }
 \examples{
-do.call(rbind, apply(abx_test_df, 2, vancomycin_list, row.names(abx_test_df)))
+vancomycin_list(abx_test_df)
 
 }
