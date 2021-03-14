@@ -2,7 +2,7 @@
 % Please edit documentation in R/abx_index.R
 \name{anaerobe_list}
 \alias{anaerobe_list}
-\title{Return taxons that are susceptible or resistant to antibiotics targeting anaerobes}
+\title{Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting anaerobes}
 \usage{
 anaerobe_list(abundance, delim = "; ")
 }
@@ -15,7 +15,7 @@ anaerobe_list(abundance, delim = "; ")
 A dataframe of taxa abundances and whether they are susceptible or resistant to anti-anaerobic antibiotics
 }
 \description{
-Return taxons that are susceptible or resistant to antibiotics targeting anaerobes
+Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting anaerobes
 }
 \examples{
 anaerobe_list(abx_test_df)

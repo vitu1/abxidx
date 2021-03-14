@@ -2,7 +2,7 @@
 % Please edit documentation in R/abx_index.R
 \name{penicillin_list}
 \alias{penicillin_list}
-\title{Return taxons susceptible or resistant to Penicillin-like antibiotics}
+\title{Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Penicillin-like antibiotics}
 \usage{
 penicillin_list(abundance, delim = "; ")
 }
@@ -15,7 +15,7 @@ penicillin_list(abundance, delim = "; ")
 A dataframe of taxa abundances and whether they are susceptible or resistant to penicillin-like antibiotics
 }
 \description{
-Return taxons susceptible or resistant to Penicillin-like antibiotics
+Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Penicillin-like antibiotics
 }
 \examples{
 penicillin_list(abx_test_df)

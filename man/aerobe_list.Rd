@@ -2,7 +2,7 @@
 % Please edit documentation in R/abx_index.R
 \name{aerobe_list}
 \alias{aerobe_list}
-\title{Return taxons that are susceptible or resistant to antibiotics targeting aerobes}
+\title{Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting aerobes}
 \usage{
 aerobe_list(abundance, delim = "; ")
 }
@@ -15,7 +15,7 @@ aerobe_list(abundance, delim = "; ")
 A dataframe of taxa abundances and whether they are susceptible or resistant to anti-aerobic antibiotics
 }
 \description{
-Return taxons that are susceptible or resistant to antibiotics targeting aerobes
+Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting aerobes
 }
 \examples{
 aerobe_list(abx_test_df)

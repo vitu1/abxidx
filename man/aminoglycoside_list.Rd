@@ -2,7 +2,7 @@
 % Please edit documentation in R/abx_index.R
 \name{aminoglycoside_list}
 \alias{aminoglycoside_list}
-\title{Return taxons susceptible or resistant to antibiotics targeting gram-negative aerobes}
+\title{Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting gram-negative aerobes}
 \usage{
 aminoglycoside_list(abundance, delim = "; ")
 }
@@ -15,7 +15,7 @@ aminoglycoside_list(abundance, delim = "; ")
 A dataframe of taxa abundances and whether they are susceptible or resistant to antibiotics targeting gram-negative aerobes
 }
 \description{
-Return taxons susceptible or resistant to antibiotics targeting gram-negative aerobes
+Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting gram-negative aerobes
 }
 \examples{
 aminoglycoside_list(abx_test_df)

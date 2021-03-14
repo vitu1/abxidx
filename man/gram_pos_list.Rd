@@ -2,7 +2,7 @@
 % Please edit documentation in R/abx_index.R
 \name{gram_pos_list}
 \alias{gram_pos_list}
-\title{Returns taxons that are susceptible or resistant to antibiotics targeting gram positive bacteria}
+\title{Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting gram positive bacteria}
 \usage{
 gram_pos_list(abundance, delim = "; ")
 }
@@ -15,7 +15,7 @@ gram_pos_list(abundance, delim = "; ")
 A dataframe of taxa abundances and whether they are susceptible or resistant to anti-gram positive antibiotics
 }
 \description{
-Returns taxons that are susceptible or resistant to antibiotics targeting gram positive bacteria
+Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting gram positive bacteria
 }
 \examples{
 gram_pos_list(abx_test_df)

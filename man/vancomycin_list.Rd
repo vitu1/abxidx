@@ -2,7 +2,7 @@
 % Please edit documentation in R/abx_index.R
 \name{vancomycin_list}
 \alias{vancomycin_list}
-\title{Return taxons that are susceptible or resistant to Vancomycin}
+\title{Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Vancomycin}
 \usage{
 vancomycin_list(abundance, delim = "; ")
 }
@@ -15,7 +15,7 @@ vancomycin_list(abundance, delim = "; ")
 A dataframe of taxa abundances and whether they are susceptible or resistant to vancomycin
 }
 \description{
-Return taxons that are susceptible or resistant to Vancomycin
+Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Vancomycin
 }
 \examples{
 vancomycin_list(abx_test_df)

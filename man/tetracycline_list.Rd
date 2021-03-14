@@ -2,7 +2,7 @@
 % Please edit documentation in R/abx_index.R
 \name{tetracycline_list}
 \alias{tetracycline_list}
-\title{Return taxons that are susceptible or resistant to Tetracycline}
+\title{Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Tetracycline}
 \usage{
 tetracycline_list(abundance, delim = "; ")
 }
@@ -15,7 +15,7 @@ tetracycline_list(abundance, delim = "; ")
 A dataframe of taxa abundances and whether they are susceptible or resistant to tetracycline
 }
 \description{
-Return taxons that are susceptible or resistant to Tetracycline
+Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Tetracycline
 }
 \examples{
 tetracycline_list(abx_test_df)
