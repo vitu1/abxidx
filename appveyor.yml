@@ -15,6 +15,8 @@ cache:
 
 environment:
   NOT_CRAN: true
+  CODECOV_TOKEN:
+    secure: IVk+GIhoP6DuMlFYuxsE+7H94WCnHWvw8wpdCmBuId/bzIwfVifBOnvnhRM1Y5LW
   # env vars that may need to be set, at least temporarily, from time to time
   # see https://github.com/krlmlr/r-appveyor#readme for details
   # USE_RTOOLS: true
@@ -52,4 +54,4 @@ artifacts:
     name: Bits
 
 on_success:
-  - Rscript -e 'args <- commandArgs(trailingOnly = TRUE);covr::codecov(token=args[1])' IVk+GIhoP6DuMlFYuxsE+7H94WCnHWvw8wpdCmBuId/bzIwfVifBOnvnhRM1Y5LW
+  - Rscript -e 'covr::codecov()'
