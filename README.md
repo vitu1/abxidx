@@ -5,7 +5,7 @@
 [![Travis build
 status](https://travis-ci.com/vitu1/abxidx.svg?branch=main)](https://travis-ci.com/vitu1/abxidx)
 [![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/vitu1/abxidx?branch=main&svg=true)](https://ci.appveyor.com/project/VincentTu/abxidx)
+status](https://ci.appveyor.com/api/projects/status/github/vitu1/abxidx?branch=main&svg=true)](https://ci.appveyor.com/project/vitu1/abxidx)
 [![codecov](https://codecov.io/gh/vitu1/abxidx/branch/main/graph/badge.svg?token=DT24RLUIYT)](https://codecov.io/gh/vitu1/abxidx)
 <!-- badges: end -->
 
