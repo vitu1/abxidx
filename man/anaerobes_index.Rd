@@ -9,7 +9,7 @@ anaerobes_index(abundance, delim = "; ")
 \arguments{
 \item{abundance}{A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by \code{delim}}
 
-\item{delim}{Delimiter for the taxonomy lineage rownames. Rownames MUST contain \code{Kingdom} down to \code{Species} level separation by the \code{delim} even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )}
+\item{delim}{Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)}
 }
 \value{
 The calculated antibiotics index each sample in the dataframe

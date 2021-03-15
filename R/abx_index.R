@@ -1,7 +1,7 @@
 #' Calculate antibiotics index for Vancomycin
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return The calculated antibiotics index each sample in the dataframe
 #' @export
@@ -19,7 +19,7 @@ vancomycin_index <- function(abundance, delim = "; ") {
 #' Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Vancomycin
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return A dataframe of taxa abundances and whether they are susceptible or resistant to vancomycin
 #' @export
@@ -37,7 +37,7 @@ vancomycin_list <- function(abundance, delim = "; ") {
 #' Calculate antibiotics index for Tetracycline
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return The calculated antibiotics index each sample in the dataframe
 #' @export
@@ -55,7 +55,7 @@ tetracycline_index <- function(abundance, delim = "; ") {
 #' Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Tetracycline
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return A dataframe of taxa abundances and whether they are susceptible or resistant to tetracycline
 #' @export
@@ -73,7 +73,7 @@ tetracycline_list <- function(abundance, delim = "; ") {
 #' Calculate antibiotics index for Penicillin-like antibiotics
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return The calculated antibiotics index each sample in the dataframe
 #' @export
@@ -91,7 +91,7 @@ penicillin_index <- function(abundance, delim = "; ") {
 #' Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to Penicillin-like antibiotics
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return A dataframe of taxa abundances and whether they are susceptible or resistant to penicillin-like antibiotics
 #' @export
@@ -109,7 +109,7 @@ penicillin_list <- function(abundance, delim = "; ") {
 #' Calculate antibiotics index targeting gram positive bacteria such as Glycopeptides, Macrolides, Oxazolidinones, Lincosamides, and Lipopeptides aside from Vancomycin (see \code{vancomycin_index})
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return The calculated antibiotics index each sample in the dataframe
 #' @export
@@ -127,7 +127,7 @@ gram_pos_index <- function(abundance, delim = "; ") {
 #' Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting gram positive bacteria
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return A dataframe of taxa abundances and whether they are susceptible or resistant to anti-gram positive antibiotics
 #' @export
@@ -145,7 +145,7 @@ gram_pos_list <- function(abundance, delim = "; ") {
 #' Calculate antibiotics index targeting gram negatives such as Polymyxin and Aztreonam
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return The calculated antibiotics index each sample in the dataframe
 #' @export
@@ -163,7 +163,7 @@ gram_neg_index <- function(abundance, delim = "; ") {
 #' Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting gram negative bacteria
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return A dataframe of taxa abundances and whether they are susceptible or resistant to anti-gram negative antibiotics
 #' @export
@@ -181,7 +181,7 @@ gram_neg_list <- function(abundance, delim = "; ") {
 #' Calculate antibiotics index targeting anaerobes such as Nitroimidazole
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return The calculated antibiotics index each sample in the dataframe
 #' @export
@@ -199,7 +199,7 @@ anaerobes_index <- function(abundance, delim = "; ") {
 #' Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting anaerobes
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return A dataframe of taxa abundances and whether they are susceptible or resistant to anti-anaerobic antibiotics
 #' @export
@@ -217,7 +217,7 @@ anaerobe_list <- function(abundance, delim = "; ") {
 #' Calculate antibiotics index targeting aerobes such as Fluoroquinolone
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return The calculated antibiotics index each sample in the dataframe
 #' @export
@@ -235,7 +235,7 @@ aerobes_index <- function(abundance, delim = "; ") {
 #' Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting aerobes
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return A dataframe of taxa abundances and whether they are susceptible or resistant to anti-aerobic antibiotics
 #' @export
@@ -253,7 +253,7 @@ aerobe_list <- function(abundance, delim = "; ") {
 #' Calculate antibiotics index targeting gram-negative aerobes such as aminoglycoside
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return The calculated antibiotics index each sample in the dataframe
 #' @export
@@ -276,7 +276,7 @@ aminoglycoside_index <- function(abundance, delim = "; ") {
 #' Return taxons that are susceptible or resistant (unknown antibiotics phenotype are counted as resistant) to antibiotics targeting gram-negative aerobes
 #'
 #' @param abundance A relative abundance dataframe of bacterial taxons with samples as columns and the taxonomy lineage as the rownames, separated by `delim`
-#' @param delim Delimiter for the taxonomy lineage rownames. Rownames MUST contain `Kingdom` down to `Species` level separation by the `delim` even if no information is available for missing ranks (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia; ; ; ; )
+#' @param delim Delimiter for the taxonomy lineage rownames (e.g. k__Bacteria; p__Bacteroidetes; c__Bacteroidia)
 #'
 #' @return A dataframe of taxa abundances and whether they are susceptible or resistant to antibiotics targeting gram-negative aerobes
 #' @export
@@ -312,7 +312,7 @@ is_susceptible <- function(taxa, idx, delim) {
     abx_df <- abx_idx_df[abx_idx_df$attribute == abx_idx, ]
 
     ##Grab all taxonomic classifications related to abx and save it as a vector
-    pattern <- unlist(lapply(taxonomic_ranks, function(x) {
+    pattern <- unlist(lapply(taxonomic_ranks[1:max_ranks], function(x) {
       paste0(abx_df[abx_df$rank == x & abx_df$boo == TF, "name"], collapse = "|")
     }))
 
@@ -330,7 +330,7 @@ is_susceptible <- function(taxa, idx, delim) {
       grepl(pattern[match(x, each_row)], x)
     })
 
-    max(boo_list*counting)*posneg
+    max(boo_list*counting[1:max_ranks])*posneg
   }
 
   ##Initialize vector to return
