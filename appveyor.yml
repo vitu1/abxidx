@@ -1,5 +1,12 @@
 version: 1.0.{build}
 build: off
 
+environment:
+  global:
+    USE_RTOOLS: true
+    NOT_CRAN: true
+    _R_CHECK_FORCE_SUGGESTS: true
+    _R_CHECK_CRAN_INCOMING_: true
+
 on_success:
   - Rscript -e 'covr::codecov(token = "${{secrets.CODECOV_TOKEN}}", type = 'all')'
