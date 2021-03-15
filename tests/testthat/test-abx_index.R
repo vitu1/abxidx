@@ -72,6 +72,16 @@ testthat::test_that("Testing abxidx on abx_test_df", {
                                                        c = log10(1/0),
                                                        d = log10(1/0)))
 
+  ##penicillin test
+  penicillin_idx_outcome <- penicillin_index(abx_test_df)
+
+  testthat::expect_type(penicillin_idx_outcome, "double")
+  testthat::expect_equal(length(penicillin_idx_outcome), 4)
+  testthat::expect_equal(penicillin_idx_outcome, c(a = log10(0/1),
+                                                   b = log10(0/1),
+                                                   c = log10(0/1),
+                                                   d = log10(0/1)))
+
 })
 
 testthat::context("Testing list of susceptible or resistant bacteria")
@@ -120,6 +130,12 @@ testthat::test_that("Testing list of susceptible or resistant bacteria", {
   testthat::expect_equal(ncol(amino_list), 4)
   testthat::expect_equal(class(amino_list), "data.frame")
 
+  ##penicillin
+  peni_list <- penicillin_list(abx_test_df)
+  testthat::expect_equal(paste0(colnames(peni_list), collapse = ", "), "SampleID, phenotype, abundance, lineage")
+  testthat::expect_equal(ncol(peni_list), 4)
+  testthat::expect_equal(class(peni_list), "data.frame")
+
 })
 
 
@@ -136,5 +152,9 @@ testthat::test_that("Testing abx_idx_df contains the required columns", {
 testthat::test_that("Testing for duplications in abx_idx_df", {
 
   testthat::expect_equal(sum(duplicated(abx_idx_df[, c("attribute", "name", "rank")])), 0)
+
+  abx_idx_df_sub <- abx_idx_df
+  abx_idx_df_sub[nrow(abx_idx_df_sub)+1,] <- list("vancomycin", FALSE, "Leuconostoc", "Genus", "10.1053/jhin.1998.0605")
+  testthat::expect_equal(sum(duplicated(abx_idx_df_sub[, c("attribute", "name", "rank")])), 1)
 
 })
