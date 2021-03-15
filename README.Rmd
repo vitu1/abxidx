@@ -3,8 +3,6 @@ output: github_document
 ---
 
 <!-- badges: start -->
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/tuv292/abxidx?branch=master&svg=true)](https://ci.appveyor.com/project/tuv292/abxidx)
-[![Codecov test coverage](https://codecov.io/gh/tuv292/abxidx/branch/master/graph/badge.svg)](https://codecov.io/gh/tuv292/abxidx?branch=master)
 [![Travis build status](https://travis-ci.com/vitu1/abxidx.svg?branch=main)](https://travis-ci.com/vitu1/abxidx)
 [![R-CMD-check](https://github.com/vitu1/abxidx/workflows/R-CMD-check/badge.svg)](https://github.com/vitu1/abxidx/actions)
 <!-- badges: end -->
