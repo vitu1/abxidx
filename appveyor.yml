@@ -51,5 +51,5 @@ artifacts:
   - path: '\*_*.zip'
     name: Bits
 
-after_success:
+on_success:
   - Rscript -e 'args <- commandArgs(trailingOnly = TRUE);covr::codecov(token=args[1])' IVk+GIhoP6DuMlFYuxsE+7H94WCnHWvw8wpdCmBuId/bzIwfVifBOnvnhRM1Y5LW
