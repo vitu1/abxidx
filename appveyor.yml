@@ -52,4 +52,4 @@ artifacts:
     name: Bits
 
 on_success:
-  - Rscript -e 'covr::codecov(base_url = "https://app.codecov.io")'
+  - Rscript -e 'covr::codecov(base_url = 'https://app.codecov.io')'
