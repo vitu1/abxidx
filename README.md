@@ -1,19 +1,16 @@
 
 <!-- badges: start -->
 
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/tuv292/abxidx?branch=master&svg=true)](https://ci.appveyor.com/project/tuv292/abxidx)
 [![Travis build
-status](https://travis-ci.com/tuv292/abxidx.svg?branch=master)](https://travis-ci.com/tuv292/abxidx)
-[![Codecov test
-coverage](https://codecov.io/gh/tuv292/abxidx/branch/master/graph/badge.svg)](https://codecov.io/gh/tuv292/abxidx?branch=master)
+status](https://travis-ci.com/vitu1/abxidx.svg?branch=main)](https://travis-ci.com/vitu1/abxidx)
+[![R-CMD-check](https://github.com/vitu1/abxidx/workflows/R-CMD-check/badge.svg)](https://github.com/vitu1/abxidx/actions)
 <!-- badges: end -->
 
 # abxidx
 
 The goal of abxidx is to calculate an index for a given bacterial
-community’s susceptibility to the given
-antibiotics.
+community’s susceptibility to the specified
+antibiotics
 
 <!-- ## Installation -->
 
@@ -30,13 +27,7 @@ antibiotics.
 ``` r
 library(abxidx)
 
-# vanco_idx <- vancomycin_index(test_df)
-# vanco_idx
-```
-
-Plot of the vancomycin index on test\_df
-
-``` r
-
-# abx_idx_plot(vanco_idx, T)
+vancomycin_index(abx_test_df)
+#>         a         b         c         d 
+#> 0.0000000 0.4771213      -Inf       Inf
 ```
