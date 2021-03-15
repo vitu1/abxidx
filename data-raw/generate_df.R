@@ -32,7 +32,7 @@ phenotypes_species <- utils::read.delim(here::here("data-raw", "species_0831.txt
   filter(!(grepl("^Bifidobacterium", name) & grepl("anaerobe|aerobe", attribute))) #Remove Bifidobacterium from this dataset; assuming all Bifidobacterium are resistant to tetracycline and are obligate anaerobes
 
 ##manually curated lactobacillus database from paper
-lactobacillus_species <- utils::read.delim(here::here("data-raw", "Lactobacillus_data.csv"), sep = ",", header = TRUE) %>%
+lactobacillus_species <- utils::read.delim(here::here("data-raw", "Lactobacillus_data.csv"), sep = ",", header = TRUE, fileEncoding = "UTF-8") %>%
   mutate(anaerobe = ifelse(grepl("^Anaerobic|^Strictly anaerobic", Growth.conditions), TRUE, FALSE)) %>%
   mutate(aerobe = ifelse(grepl("^Aerobic", Growth.conditions), TRUE, FALSE)) %>%
   mutate(doi = as.character(doi), name = as.character(name)) %>%
