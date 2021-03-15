@@ -52,4 +52,4 @@ artifacts:
     name: Bits
 
 on_success:
-  - Rscript -e 'covr::codecov(type = "all")'
+  - Rscript -e 'covr::codecov()'
