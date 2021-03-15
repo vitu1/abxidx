@@ -54,4 +54,4 @@ artifacts:
     name: Bits
 
 on_success:
-  - Rscript -e 'covr::codecov()'
+  - Rscript -e 'Sys.setenv(CODECOV_TOKEN = %CODECOV_TOKEN%);covr::codecov()'
