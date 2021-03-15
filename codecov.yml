@@ -1,0 +1,27 @@
+codecov:
+  token: "${{secrets.CODECOV_TOKEN}}"
+  bot: "codecov-io"
+  ci:
+    - "ci.appveyor.com"
+  strict_yaml_branch: "yaml-config"
+  max_report_age: 24
+  disable_default_path_fixes: no
+  require_ci_to_pass: yes
+  notify:
+    after_n_builds: 2
+    wait_for_ci: yes
+
+comment: false
+
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+        informational: true
+    patch:
+      default:
+        target: auto
+        threshold: 1%
+        informational: true
