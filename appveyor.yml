@@ -50,3 +50,6 @@ artifacts:
 
   - path: '\*_*.zip'
     name: Bits
+
+on_success:
+  - Rscript -e 'covr::codecov(token = IVk+GIhoP6DuMlFYuxsE+7H94WCnHWvw8wpdCmBuId/bzIwfVifBOnvnhRM1Y5LW)'
