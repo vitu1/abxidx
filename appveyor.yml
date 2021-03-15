@@ -54,4 +54,4 @@ artifacts:
     name: Bits
 
 on_success:
-  - Rscript -e 'covr::codecov(token=${codecov_token})'
+  - Rscript -e 'args <- commandArgs(trailingOnly = TRUE);covr::codecov(token=args[1])' ${codecov_token}
