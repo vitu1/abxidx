@@ -1,9 +1,12 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/vitu1/abxidx/workflows/R-CMD-check/badge.svg)](https://github.com/vitu1/abxidx/actions)
 [![Travis build
 status](https://travis-ci.com/vitu1/abxidx.svg?branch=main)](https://travis-ci.com/vitu1/abxidx)
-[![R-CMD-check](https://github.com/vitu1/abxidx/workflows/R-CMD-check/badge.svg)](https://github.com/vitu1/abxidx/actions)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/vitu1/abxidx?branch=master&svg=true)](https://ci.appveyor.com/project/VincentTu/abxidx)
+
 <!-- badges: end -->
 
 # abxidx
