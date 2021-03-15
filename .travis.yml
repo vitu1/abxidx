@@ -14,4 +14,4 @@ r:
   - devel
 
 after_success:
-  - Rscript -e 'covr::codecov(type = 'all')'
+  - Rscript -e 'covr::codecov(token = "${{secrets.CODECOV_TOKEN}}", type = 'all')'
