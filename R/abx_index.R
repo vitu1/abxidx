@@ -336,11 +336,6 @@ is_susceptible <- function(taxa, idx, delim) {
   ##Initialize vector to return
   suscept_vector <- rep(0, length(taxa))
 
-  ##If abx is tetracyciline or penicillin, assume all taxa is susceptible
-  if(any(grepl("tetracycline|penicillin", idx))) {
-    suscept_vector <- rep(1, length(taxa))
-  }
-
   ##Split taxon assignments into matrix; code adapted from from qiimer package
   taxonomic_ranks <- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
   split_matrix <- gsub("[kpcofgs]__", "", taxa)
@@ -355,6 +350,11 @@ is_susceptible <- function(taxa, idx, delim) {
 
   ##Get susceptible vector for each abx in loop. Phenotypes of later abx in loop overrides earlier phenotypes
   for(each_idx in idx) {
+
+    ##If abx is tetracyciline or penicillin, assume all taxa is susceptible
+    if(grepl("tetracycline|penicillin", each_idx)) {
+      suscept_vector <- rep(1, length(taxa))
+    }
 
     res_pattern <- return_ranked_pattern(each_idx, FALSE)
     sus_pattern <- return_ranked_pattern(each_idx, TRUE)
