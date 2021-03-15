@@ -12,6 +12,3 @@ r:
   - 3.6
   - release
   - devel
-
-after_success:
-  - Rscript -e 'covr::codecov(token = "${{secrets.CODECOV_TOKEN}}", type = 'all')'

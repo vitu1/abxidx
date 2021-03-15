@@ -1,2 +1,5 @@
 version: 1.0.{build}
 build: off
+
+on_success:
+  - Rscript -e 'covr::codecov(token = "${{secrets.CODECOV_TOKEN}}", type = 'all')'
